@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cnsrdb.mapper.BookMapper">
+
+    <sql id="cols">
+        b_id, b_name, b_author, b_publicYear, b_in from lib.book
+    </sql>
+
+    <select id="getAll" resultType="org.cnsrdb.po.Book">
+        select
+        <include refid="cols"/>
+    </select>
+
+    <select id="get" resultType="org.cnsrdb.po.Book" parameterType="map">
+        select
+        <include refid="cols"/>
+        where b_name like concat('%', #{arg0}, '%')
+        and
+        b_author like concat('%', #{arg1}, '%')
+    </select>
+
+    <select id="getByName" resultType="org.cnsrdb.po.Book">
+        select
+        <include refid="cols"/>
+        where b_name like concat('%', #{_parameter}, '%')
+    </select>
+
+    <select id="getByAuthor" resultType="org.cnsrdb.po.Book">
+        select
+        <include refid="cols"/>
+        where b_author = #{_parameter}
+    </select>
+
+    <insert id="addBook" parameterType="org.cnsrdb.po.Book">
+        insert into lib.book(b_id, b_name, b_author, b_publicYear, b_in)
+        VALUES (#{b_id}, #{b_name}, #{b_author}, ${b_publicYear}, #{b_in})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from lib.book
+        where b_id = #{_parameter}
+    </delete>
+
+</mapper>

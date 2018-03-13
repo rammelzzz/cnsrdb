@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cnsrdb.mapper.StudentMapper">
+
+    <sql id="base">
+        s_id, s_chineseName, s_gender, s_type
+    </sql>
+
+    <select id="graduateStudents" resultType="org.cnsrdb.po.Student">
+        select <include refid="base"/>, s_enrollTime, s_graduateTime, s_firseWorkPlace
+        from bm.student
+    </select>
+
+    <select id="nowStudents" resultType="org.cnsrdb.po.Student">
+        select
+        <include refid="base"/>, s_country, s_tutor
+        from bm.student
+    </select>
+
+</mapper>

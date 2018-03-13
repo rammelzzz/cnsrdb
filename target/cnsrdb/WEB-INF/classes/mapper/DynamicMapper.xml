@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cnsrdb.mapper.DynamicMapper">
+
+    <sql id="vo">
+        d_id, d_title, d_type
+    </sql>
+
+    <sql id="po">
+        d_id, d_title, d_type, d_content
+    </sql>
+
+    <select id="getList" parameterType="string" resultType="org.cnsrdb.po.Dynamic">
+        select
+        <include refid="vo"/>
+        from edu.dynamic
+        where d_type = #{_parameter}
+    </select>
+
+    <select id="get" parameterType="int" resultType="org.cnsrdb.po.Dynamic">
+        select
+        <include refid="po"/>
+        from edu.dynamic
+        where d_id = #{_parameter}
+    </select>
+
+    <insert id="insert" parameterType="org.cnsrdb.po.Dynamic">
+        insert into edu.dynamic(d_title, d_type, d_content)
+        values(#{d_title}, #{d_type}, #{d_content})
+    </insert>
+</mapper>

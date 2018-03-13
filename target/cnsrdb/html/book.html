@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>图书搜索</title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/GLOBAL.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body> 
+<div class="row" >
+	<div class="col-xs-10 col-xs-offset-1">
+    	
+    	<div id="header" class="row" style="background-image:url('../img/1.png')">
+      </div>
+        
+        <div id="menu" class="row" style="margin-top:5px;">
+        </div>
+        
+        <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="index.html">首页</a></li>          
+          <li><a href="signinfo.html">内部管理</a></li>
+          <li id="active" class="active">查询图书信息</li>
+        </ol>
+        <div class="col-xs-3">
+          <div class="panel panel-primary">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+              <li role="presentation"><a href="changePassword.html">修改个人密码</a></li>
+              <li role="presentation" class="active"><a href="book.html">查询图书信息</a></li>
+              <li role="presentation"><a href="dynamicList.html">动态信息列表</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-7 col-xs-offset-1">
+          <div class="panel panel-primary">
+			      <div class="panel-heading">
+            	<h3 class="panel-title">图书搜索</h3>
+            </div>
+				  <div class="panel-body">
+					  <form>
+						  <fieldset>
+							<div class="form-group">
+								<input class="form-control" placeholder="图书名" id="B_Name" type="text" autofocus>
+							</div>
+                            <div class="form-group">
+								<input class="form-control" placeholder="作者（可选）" id="B_Author" type="text">
+							</div>
+              <button type="button" class="btn btn-primary" onClick="book()">搜索</button>
+						  </fieldset>
+					  </form>
+				  </div>
+		      </div>
+    	  </div>
+		
+		    <div class="col-xs-7 col-xs-offset-4">
+		    <div class="panel panel-primary" style="margin-top:20px;">
+           <div class="panel-heading">
+              <h3 id="title" class="panel-title">搜索结果</h3>
+           </div>
+           <div class="panel-body">
+              <table class="table table-striped">
+                   <thead>
+                      <tr>
+                         <th>图书编号</th>
+                         <th>图书名字</th>
+                         <th>作者</th>
+                         <th>出版年份</th>
+                         <th>是否可借</th>
+                      </tr>
+                   </thead>
+                   <tbody id="table">
+                   </tbody>
+              </table>
+           </div>
+        </div>
+        </div>
+      </div>
+
+        <div id="footer" class="row" style="margin-top:20px;">	
+        </div>
+        
+    </div>
+</div>
+<script src="../js/jquery-1.11.2.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
+<script src="../js/GLOBAL.js"></script>
+<script src="../js/book.js"></script>
+</body>
+</html>

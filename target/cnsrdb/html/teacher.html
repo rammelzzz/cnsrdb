@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/GLOBAL.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+<div class="row" >
+    <div class="col-xs-10 col-xs-offset-1">
+
+        <div id="header" class="row" style="background-image:url('../img/1.png')">
+        </div>
+
+        <div id="menu" class="row" style="margin-top:5px;">
+        </div>
+
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="introduction.html">关于我们</a></li>
+                <li id="active" class="active"></li>
+            </ol>
+            <div class="col-xs-3">
+                <div class="panel panel-primary">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li role="presentation"><a href="introduction.html">实验室简介</a></li>
+                        <li role="presentation" id="teacher0"><a href="teacher.html?t=0">全职教师</a></li>
+                        <li role="presentation" id="teacher1"><a href="teacher.html?t=1">兼职教师</a></li>
+                        <li role="presentation" id="student0"><a href="student.html?t=0">在读学生</a></li>
+                        <li role="presentation" id="student1"><a href="student.html?t=1">毕业学生</a></li>
+                        <li role="presentation"><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-7 col-xs-offset-1">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 id="title" class="panel-title"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr id="thead">
+                            </tr>
+                            </thead>
+                            <tbody id="table">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer" class="row" style="margin-top:20px;">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/GLOBAL.js"></script>
+<script src="../js/teacher.js"></script>
+</body>
+</html>

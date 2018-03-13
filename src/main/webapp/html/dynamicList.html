@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>获取动态信息</title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/GLOBAL.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body> 
+<div class="row" >
+	<div class="col-xs-10 col-xs-offset-1">
+    	
+    	<div id="header" class="row" style="background-image:url('../img/1.png')">
+      </div>
+        
+        <div id="menu" class="row" style="margin-top:5px;">
+        </div>
+        
+        <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="index.html">首页</a></li>          
+          <li><a href="signinfo.html">内部管理</a></li>
+          <li id="active" class="active">动态信息列表</li>
+        </ol>
+        <div class="col-xs-3">
+          <div class="panel panel-primary">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+              <li role="presentation"><a href="changePassword.html">修改个人密码</a></li>
+              <li role="presentation"><a href="book.html">查询图书信息</a></li>
+              <li role="presentation" class="active"><a href="dynamicList.html">动态信息列表</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-7 col-xs-offset-1">
+          <div class="panel panel-primary">
+			<div class="panel-heading">
+            	<h3 class="panel-title">获取动态信息</h3>
+            </div>
+				<div class="panel-body">
+					<form>
+						<fieldset>
+							选择信息类型：
+							<label><input name="D_Type" type="radio" value="新闻动态" />新闻动态 </label>
+							<label><input name="D_Type" type="radio" value="通知通告" />通知通告 </label>
+                            <label><input name="D_Type" type="radio" value="学术活动" />学术活动 </label>
+                            <br /> 
+                            <button type="button" class="btn btn-primary" onClick="dynamicList()">搜索</button>
+						</fieldset>
+					</form>
+				</div>
+		</div>
+    	
+		
+		<div class="panel panel-primary" style="margin-top:20px;">
+           <div class="panel-heading">
+              <h3 id="title" class="panel-title">信息列表</h3>
+           </div>
+           <div class="panel-body">
+              <table class="table table-striped">
+                   <thead>
+                      <tr>
+                         <th>信息ID</th>
+                         <th>信息标题</th>
+                         <th>信息类型</th>
+                      </tr>
+                   </thead>
+                   <tbody id="table">
+                   </tbody>
+              </table>
+           </div>
+        </div>
+      </div>
+      </div>
+        <div id="footer" class="row" style="margin-top:20px;">	
+        </div>
+        
+    </div>
+</div>
+<script src="../js/jquery-1.11.2.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
+<script src="../js/GLOBAL.js"></script>
+<script src="../js/dynamicList.js"></script>
+</body>
+</html>

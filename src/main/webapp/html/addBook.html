@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/GLOBAL.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body> 
+<div class="row" >
+	<div class="col-xs-10 col-xs-offset-1">
+    	
+    	<div id="header" class="row" style="background-image:url('../img/1.png')">
+        </div>
+        
+        <div id="menu" class="row" style="margin-top:5px;">
+        </div>
+        
+        <div class="row">
+        	<ol class="breadcrumb">
+  				<li><a href="index.html">首页</a></li>
+  				<li><a href="addBook.html">系统管理</a></li>
+  				<li class="active">添加图书</li>
+			</ol>
+        <div class="col-xs-3">
+        <div class="panel panel-primary">
+        	<ul class="nav nav-pills nav-stacked" role="tablist">
+				<li role="presentation" class="active"><a href="addBook.html">添加图书</a></li>
+  				<li role="presentation"><a href="addDynamic.html">添加动态信息</a></li>
+				<li role="presentation"><a href="deleteBook.html">删除图书</a></li>
+			</ul>
+		</div>
+		</div>
+		<div class="col-xs-7 col-xs-offset-1">
+    	<div class="panel panel-primary">
+			<div class="panel-heading">
+            	<h3 class="panel-title">添加图书</h3>
+            </div>
+				<div class="panel-body">
+					<form>
+						<fieldset>
+                       		<div class="form-group">
+								<input class="form-control" placeholder="图书ID" id="book_no" type="text" autofocus>
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="图书名" id="book_name" type="text" autofocus>
+							</div>
+                            <div class="form-group">
+								<input class="form-control" placeholder="作者" id="book_author" type="text">
+							</div>
+                            <div class="form-group">
+								<input class="form-control" placeholder="图书出版年份" id="book_publish_year" type="text">
+							</div>
+							
+                            <br /> 
+                            <button type="button" class="btn btn-primary" onClick="add()">添加</button>
+						</fieldset>
+					</form>
+				</div>
+		</div>
+    	</div>
+		</div>
+        
+        <div id="footer" class="row" style="margin-top:20px;">	
+        </div>
+        
+    </div>
+</div>
+        
+
+        
+    </div>
+</div>
+
+<script src="../js/jquery-1.11.2.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
+<script src="../js/GLOBAL.js"></script>
+<script src="../js/addBook.js"></script>
+</body>
+</html>

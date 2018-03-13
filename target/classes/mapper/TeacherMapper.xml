@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.cnsrdb.mapper.TeacherMapper">
+
+    <sql id="base">
+        t_id, t_chineseName, t_gender, t_type
+    </sql>
+
+    <select id="listTeachers" resultType="org.cnsrdb.po.Teacher">
+        select <include refid="base"/>
+        from bm.teacher
+    </select>
+
+</mapper>
